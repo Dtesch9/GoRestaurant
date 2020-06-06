@@ -10,6 +10,7 @@ export const Container = styled.div<IContainerProps>`
   align-items: center;
 
   background: #fff;
+  border: 1px solid #fff; /*add*/
   border-radius: 8px;
   padding: 18px 24px;
   width: 100%;
@@ -33,17 +34,18 @@ export const Container = styled.div<IContainerProps>`
       border-color: #ff9000;
     `}
 
-  ${props =>
-    props.isFilled &&
-    css`
-      color: #ff9000;
-    `}
-
   input {
     flex: 1;
     background: transparent;
     border: 0;
     color: #b7b7cc;
+
+    /* Change */
+    ${props =>
+      props.isFilled &&
+      css`
+        color: #ff9000;
+      `}
 
     &::placeholder {
       color: #b7b7cc;
